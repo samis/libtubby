@@ -9,6 +9,12 @@ package lib.teletubbies;
  * @author samis
  */
 public class Noo_Noo implements IPet {
+    int price;
+    int niceness;
+    public Noo_Noo()  {
+        price = 100;
+        niceness = 100;
+    }
     public void sleep() {
         
     }
