@@ -12,7 +12,7 @@ public class TeletubbyFamily {
 
     private Teletubby father;
     private Teletubby mother;
-    private Ipet family_noo_noo;
+    private Noo_Noo family_noo_noo;
 
     public TeletubbyFamily(Teletubby dad, Teletubby mum) {
         this.father = dad;
@@ -20,9 +20,8 @@ public class TeletubbyFamily {
         this.family_noo_noo = new Noo_Noo(100, 100);
     }
 
-    public TeletubbyFamily(Teletubby mum, Teletubby dad, Ipet noo_noo) {
-        this.father = dad;
-        this.mother = mum;
+    public TeletubbyFamily(Teletubby mum, Teletubby dad, Noo_Noo noo_noo) {
+        this(dad, mum);
     }
 
     public Teletubby getFather() {
@@ -38,7 +37,7 @@ public class TeletubbyFamily {
     }
 
     public Noo_Noo get_noo_noo() {
-        return (Noo_Noo) family_noo_noo;
+        return family_noo_noo;
     }
 
     public Teletubby getMother() {
