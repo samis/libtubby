@@ -8,7 +8,7 @@ package lib.teletubbies;
  *
  * @author samis
  */
-public interface IPet {
+public interface Ipet {
     public void hug(Teletubby t);
     public int getPrice();
     public void setPrice(int price);
