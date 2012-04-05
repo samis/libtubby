@@ -11,6 +11,7 @@ import java.util.Random;
 public class Noo_Noo implements Ipet {
     private int price;
     private int niceness;
+    public boolean isNooNoo = true;
     Random generator = new Random();
     public Noo_Noo()  {
         price = 100;
@@ -74,5 +75,4 @@ public class Noo_Noo implements Ipet {
         System.out.print("Noo Noo is hugging the");
         System.out.print(" "+ t.getTubbySpecies());
     }
-        
     }
