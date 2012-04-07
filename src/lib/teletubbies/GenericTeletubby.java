@@ -23,7 +23,7 @@ public class GenericTeletubby extends Teletubby {
 	 * @param age
 	 * @param species
 	 */
-	public GenericTeletubby(int age, String species) {
+	public GenericTeletubby(int age, SpeciesEnum species) {
 		super(age, species);
 		// TODO Auto-generated constructor stub
 	}

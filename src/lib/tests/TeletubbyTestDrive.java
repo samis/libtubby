@@ -14,8 +14,8 @@ public class TeletubbyTestDrive {
          * This tests the Teletubby classes
          * 
          */
-        GenericTeletubby t = new GenericTeletubby(5, "Tinky Winky", 20, "Rainbow");
-        Dipsy d = new Dipsy(5, "Dipsy", 20, "Rainbow");
+        GenericTeletubby t = new GenericTeletubby(5, SpeciesEnum.DIPSY.spec, 20, "Rainbow");
+        Dipsy d = new Dipsy(5, SpeciesEnum.DIPSY.spec, 20, "Rainbow");
         Laa_Laa l = new Laa_Laa();
         Laa_Laa l2 = new Laa_Laa();
         System.out.println(t.getTubbyAge());

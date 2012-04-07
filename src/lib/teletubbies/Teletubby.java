@@ -20,7 +20,7 @@ public abstract class Teletubby implements Serializable {
     /** The age of the Teletubby **/
     private int tubbyAge;
     /** The species of the teletubby, Only used internally **/
-    private String tubbySpecies;
+    private SpeciesEnum tubbySpecies;
     /** The weight of the teletubby **/
     private int tubbyWeight;
     /** The teletubby's favorite flavour of Yummy Po Food **/
@@ -61,7 +61,7 @@ public abstract class Teletubby implements Serializable {
     public Teletubby(int age) {
         super();
         this.setTubbyAge(age);
-        this.setTubbySpecies("Po");
+        this.setTubbySpecies(SpeciesEnum.PO);
         this.setTubbyWeight(1);
         this.setPoFoodFavorite("Vanilla");
         this.setHybrid(false);
@@ -78,7 +78,7 @@ public abstract class Teletubby implements Serializable {
      *            - the species to give the teletubby
      * @since 1.0
      */
-    public Teletubby(int age, String species) {
+    public Teletubby(int age, SpeciesEnum species) {
         this(age);
         this.setTubbySpecies(species);
         this.setTubbyWeight(1);
@@ -99,7 +99,7 @@ public abstract class Teletubby implements Serializable {
      *            - the weight to give the teletubby
      * @since 1.0
      */
-    public Teletubby(int age, String species, int weight) {
+    public Teletubby(int age, SpeciesEnum species, int weight) {
         this(age, species);
         this.setTubbyWeight(weight);
         this.setPoFoodFavorite("Vanilla");
@@ -122,7 +122,7 @@ public abstract class Teletubby implements Serializable {
      *            - the favorite flavor of pofood to give the teletubby.
      * @since 1.0
      */
-    public Teletubby(int age, String species, int weight, String pofood) {
+    public Teletubby(int age, SpeciesEnum species, int weight, String pofood) {
         this(age, species, weight);
         this.setPoFoodFavorite(pofood);
         this.setHybrid(false);
@@ -145,7 +145,7 @@ public abstract class Teletubby implements Serializable {
      *            - whether the teletubby is a hybrid or not
      * @since 1.0
      */
-    public Teletubby(int age, String species, int weight, String pofood,
+    public Teletubby(int age, SpeciesEnum species, int weight, String pofood,
             boolean hybrid) {
         this(age, species, weight, pofood);
         this.setHybrid(hybrid);
@@ -205,7 +205,7 @@ public abstract class Teletubby implements Serializable {
      *
      * @return tubbySpecies - the species of the teletubby
      */
-    public String getTubbySpecies() {
+    public SpeciesEnum getTubbySpecies() {
         return this.tubbySpecies;
     }
 
@@ -216,13 +216,8 @@ public abstract class Teletubby implements Serializable {
      * @param tubbySpecies
      *            - the species to hopefully give the teletubby
      */
-    public void setTubbySpecies(String tubbySpecies) {
-        if (tubbySpecies != null) {
+    public void setTubbySpecies(SpeciesEnum tubbySpecies) {
             this.tubbySpecies = tubbySpecies;
-        } else {
-            System.out.println("Species cannot be null, setting to Po");
-            this.tubbySpecies = "Po";
-        }
     }
 
     /**
