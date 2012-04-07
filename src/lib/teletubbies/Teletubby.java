@@ -43,7 +43,7 @@ public abstract class Teletubby implements Serializable {
     public Teletubby() {
         super();
         this.setTubbyAge(1);
-        this.setTubbySpecies("Po");
+        this.setTubbySpecies(SpeciesEnum.Po);
         this.setTubbyWeight(1);
         this.setPoFoodFavorite("Vanilla");
         this.setHybrid(false);
@@ -61,7 +61,7 @@ public abstract class Teletubby implements Serializable {
     public Teletubby(int age) {
         super();
         this.setTubbyAge(age);
-        this.setTubbySpecies(SpeciesEnum.PO);
+        this.setTubbySpecies(SpeciesEnum.Po);
         this.setTubbyWeight(1);
         this.setPoFoodFavorite("Vanilla");
         this.setHybrid(false);
@@ -169,7 +169,7 @@ public abstract class Teletubby implements Serializable {
      * @param female
      *            - whether the teletubby is female or not
      */
-    public Teletubby(int age, String species, int weight, String pofood,
+    public Teletubby(int age, SpeciesEnum species, int weight, String pofood,
             boolean hybrid, boolean female) {
         this(age, species, weight, pofood, hybrid);
         this.setFemale(female);
@@ -207,6 +207,9 @@ public abstract class Teletubby implements Serializable {
      */
     public SpeciesEnum getTubbySpecies() {
         return this.tubbySpecies;
+    }
+    public String getSpecies() {
+        return this.tubbySpecies.spec;
     }
 
     /**

@@ -12,45 +12,45 @@ import java.util.*;
  */
 public class Laa_Laa extends Teletubby {
 
-    public Laa_Laa(int age, String species, int weight, String pofood, boolean hybrid, boolean female) {
+    public Laa_Laa(int age, SpeciesEnum species, int weight, String pofood, boolean hybrid, boolean female) {
         super(age, species, weight, pofood, hybrid, female);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
-    public Laa_Laa(int age, String species, int weight, String pofood, boolean hybrid) {
+    public Laa_Laa(int age, SpeciesEnum species, int weight, String pofood, boolean hybrid) {
         super(age, species, weight, pofood, hybrid);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
-    public Laa_Laa(int age, String species, int weight, String pofood) {
+    public Laa_Laa(int age, SpeciesEnum species, int weight, String pofood) {
         super(age, species, weight, pofood);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
-    public Laa_Laa(int age, String species, int weight) {
+    public Laa_Laa(int age, SpeciesEnum species, int weight) {
         super(age, species, weight);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
-    public Laa_Laa(int age, String species) {
+    public Laa_Laa(int age, SpeciesEnum species) {
         super(age, species);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
     public Laa_Laa(int age) {
         super(age);
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
 
     public Laa_Laa() {
         super();
-        setTubbySpecies("Laa Laa");
+        setTubbySpecies(SpeciesEnum.Laa_Laa);
         setFemale(true);
     }
     private double strength;
@@ -88,7 +88,7 @@ public class Laa_Laa extends Teletubby {
     }
     public void farm(int time) {
         System.out.println(" ");
-        System.out.print(getTubbySpecies());
+        System.out.print(getSpecies());
         System.out.print(" is starting to farm");
         System.out.println(" ");
         try { Thread.sleep(time/(int) getStrength()); } catch(Exception ex) { }
@@ -98,7 +98,7 @@ public class Laa_Laa extends Teletubby {
         System.out.print(" " + strengthincrease);
         setStrength(strength + strengthincrease);
         System.out.println(" ");
-        System.out.print(getTubbySpecies());
+        System.out.print(getSpecies());
         System.out.print(" has finished farming for now.");
     }
     @Override

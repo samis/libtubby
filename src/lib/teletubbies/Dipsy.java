@@ -14,40 +14,40 @@ public class Dipsy extends Teletubby {
 
     private static transient Random generator = new Random();
 
-    public Dipsy(int age, String species, int weight, String pofood, boolean hybrid, boolean female) {
+    public Dipsy(int age, SpeciesEnum species, int weight, String pofood, boolean hybrid, boolean female) {
         super(age, species, weight, pofood, hybrid, female);
-        setTubbySpecies("Dipsy");
+        setTubbySpecies(SpeciesEnum.Dipsy);
         setStrength(generator.nextInt(200));
     }
 
-    public Dipsy(int age, String species, int weight, String pofood, boolean hybrid) {
+    public Dipsy(int age, SpeciesEnum species, int weight, String pofood, boolean hybrid) {
         super(age, species, weight, pofood, hybrid);
-        setTubbySpecies("Dipsy");
+        setTubbySpecies(SpeciesEnum.Dipsy);
         setStrength(generator.nextInt(200));
     }
 
-    public Dipsy(int age, String species, int weight, String pofood) {
+    public Dipsy(int age, SpeciesEnum species, int weight, String pofood) {
         super(age, species, weight, pofood);
-        setTubbySpecies("Dipsy");
+        setTubbySpecies(SpeciesEnum.Dipsy);
         setStrength(generator.nextInt(200));
     }
 
-    public Dipsy(int age, String species, int weight) {
+    public Dipsy(int age, SpeciesEnum species, int weight) {
         super(age, species, weight);
-      setTubbySpecies("Dipsy");
+      setTubbySpecies(SpeciesEnum.Dipsy);
       setStrength(generator.nextInt(150));
         
     }
 
     public Dipsy(int age) {
         super(age);
-        setTubbySpecies("Dipsy");
+        setTubbySpecies(SpeciesEnum.Dipsy);
         
     }
 
     public Dipsy() {
         super();
-        setTubbySpecies("Dipsy");
+        setTubbySpecies(SpeciesEnum.Dipsy);
         setStrength(100);
     }
     private double strength;

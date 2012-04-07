@@ -33,7 +33,7 @@ public class GenericTeletubby extends Teletubby {
 	 * @param species
 	 * @param weight
 	 */
-	public GenericTeletubby(int age, String species, int weight) {
+	public GenericTeletubby(int age, SpeciesEnum species, int weight) {
 		super(age, species, weight);
 		// TODO Auto-generated constructor stub
 	}
@@ -44,7 +44,7 @@ public class GenericTeletubby extends Teletubby {
 	 * @param weight
 	 * @param pofood
 	 */
-	public GenericTeletubby(int age, String species, int weight, String pofood) {
+	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood) {
 		super(age, species, weight, pofood);
 		// TODO Auto-generated constructor stub
 	}
@@ -56,7 +56,7 @@ public class GenericTeletubby extends Teletubby {
 	 * @param pofood
 	 * @param hybrid
 	 */
-	public GenericTeletubby(int age, String species, int weight, String pofood,
+	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood,
 			boolean hybrid) {
 		super(age, species, weight, pofood, hybrid);
 		// TODO Auto-generated constructor stub
@@ -70,7 +70,7 @@ public class GenericTeletubby extends Teletubby {
 	 * @param hybrid
 	 * @param female
 	 */
-	public GenericTeletubby(int age, String species, int weight, String pofood,
+	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood,
 			boolean hybrid, boolean female) {
 		super(age, species, weight, pofood, hybrid, female);
 		// TODO Auto-generated constructor stub
