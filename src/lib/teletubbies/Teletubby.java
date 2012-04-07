@@ -292,6 +292,14 @@ public abstract class Teletubby implements Serializable {
     public boolean isFemale() {
         return this.isFemale;
     }
+    public String gender() {
+        if(this.isFemale == true){
+            return "Male";
+        }
+        else {
+            return "Female";
+        }
+    }
 
     /**
      * Sets if the teletubby is a female or not.

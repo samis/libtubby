@@ -14,7 +14,7 @@ public class TeletubbyTestDrive {
          * This tests the Teletubby classes
          * 
          */
-        GenericTeletubby t = new GenericTeletubby(5, SpeciesEnum.Dipsy, 20, "Rainbow");
+        GenericTeletubby t = new GenericTeletubby(5, SpeciesEnum.Po, 20, "Rainbow");
         Dipsy d = new Dipsy(5, SpeciesEnum.Dipsy, 20, "Rainbow");
         Laa_Laa l = new Laa_Laa();
         Laa_Laa l2 = new Laa_Laa();
