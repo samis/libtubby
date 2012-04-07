@@ -293,7 +293,7 @@ public abstract class Teletubby implements Serializable {
         return this.isFemale;
     }
     public String gender() {
-        if(this.isFemale == true){
+        if(this.isFemale == false){
             return "Male";
         }
         else {
