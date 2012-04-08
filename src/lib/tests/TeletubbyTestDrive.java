@@ -1,8 +1,10 @@
 package lib.tests;
 
+import java.util.ResourceBundle;
 import lib.teletubbies.*;
 
 public class TeletubbyTestDrive {
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	/**
 	 * @param args
@@ -15,8 +17,8 @@ public class TeletubbyTestDrive {
 		 * 
 		 */
 		GenericTeletubby t = new GenericTeletubby(5, SpeciesEnum.Po, 20,
-				"Rainbow");
-		Dipsy d = new Dipsy(5, SpeciesEnum.Dipsy, 20, "Rainbow");
+				bundle.getString("RAINBOW"));
+		Dipsy d = new Dipsy(5, SpeciesEnum.Dipsy, 20, bundle.getString("RAINBOW"));
 		Laa_Laa l = new Laa_Laa();
 		Laa_Laa l2 = new Laa_Laa();
 		System.out.println(t.getTubbyAge());
@@ -37,14 +39,14 @@ public class TeletubbyTestDrive {
 		System.out.println(myhashcode);
 		System.out.println(myothercode);
 		if (myhashcode == myothercode) {
-			System.out.println("The hash codes are equal!");
+			System.out.println(bundle.getString("EQUALCODES"));
 		}
 		String otherstring = l2.toString();
 		System.out.println(mystring);
 		System.out.println(otherstring);
 		if (mystring == null ? otherstring == null : mystring
 				.equals(otherstring)) {
-			System.out.println("The 2 strings are equal!");
+			System.out.println(bundle.getString("EQUALSTRINGS"));
 		}
 
 	}

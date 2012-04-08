@@ -15,6 +15,7 @@ import lib.util.TeletubbyUtil;
  * @version 1.1
  */
 public class UtilTestDrive {
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	/**
 	 * @param args

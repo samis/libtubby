@@ -4,22 +4,25 @@
  */
 package lib.tests;
 
+import java.util.ResourceBundle;
+
 /**
  * 
  * @author samis
  */
 public class MainTestDrive {
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	/**
 	 * @param args
 	 *            the command line arguments
 	 */
 	public static void main(String[] args) {
-		System.out.println("Beginning Tests");
-		System.out.println("Starting Teletubby Test");
+		System.out.println(bundle.getString("TESTBEGIN"));
+		System.out.println(bundle.getString("TUBBYTESTBEGIN"));
 		TeletubbyTestDrive.main(null);
-		System.out.println("Teletubby Test Finished");
-		System.out.println("Starting Util Test");
+		System.out.println(bundle.getString("TUBBYTESTEND"));
+		System.out.println(bundle.getString("UTILTESTBEGIN"));
 		UtilTestDrive.main(null);
 	}
 }
