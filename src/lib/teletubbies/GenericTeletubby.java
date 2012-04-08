@@ -11,9 +11,16 @@ package lib.teletubbies;
 public class GenericTeletubby extends Teletubby {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2588562901700879606L;
+
+	/**
 	 * @param age
 	 */
-        public GenericTeletubby() { };
+	public GenericTeletubby() {
+	};
+
 	public GenericTeletubby(int age) {
 		super(age);
 		// TODO Auto-generated constructor stub
@@ -44,7 +51,8 @@ public class GenericTeletubby extends Teletubby {
 	 * @param weight
 	 * @param pofood
 	 */
-	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood) {
+	public GenericTeletubby(int age, SpeciesEnum species, int weight,
+			String pofood) {
 		super(age, species, weight, pofood);
 		// TODO Auto-generated constructor stub
 	}
@@ -56,8 +64,8 @@ public class GenericTeletubby extends Teletubby {
 	 * @param pofood
 	 * @param hybrid
 	 */
-	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood,
-			boolean hybrid) {
+	public GenericTeletubby(int age, SpeciesEnum species, int weight,
+			String pofood, boolean hybrid) {
 		super(age, species, weight, pofood, hybrid);
 		// TODO Auto-generated constructor stub
 	}
@@ -70,8 +78,8 @@ public class GenericTeletubby extends Teletubby {
 	 * @param hybrid
 	 * @param female
 	 */
-	public GenericTeletubby(int age, SpeciesEnum species, int weight, String pofood,
-			boolean hybrid, boolean female) {
+	public GenericTeletubby(int age, SpeciesEnum species, int weight,
+			String pofood, boolean hybrid, boolean female) {
 		super(age, species, weight, pofood, hybrid, female);
 		// TODO Auto-generated constructor stub
 	}
