@@ -7,6 +7,7 @@ package lib.teletubbies;
 
 import java.io.Serializable;
 
+import java.util.ResourceBundle;
 import lib.util.TeletubbyException;
 
 /**
@@ -22,6 +23,7 @@ public abstract class Teletubby implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -1122736177723752098L;
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 	/** The age of the Teletubby **/
 	private int tubbyAge;
 	/** The species of the teletubby, Only used internally **/
@@ -50,11 +52,11 @@ public abstract class Teletubby implements Serializable {
 		this.setTubbyAge(1);
 		this.setTubbySpecies(SpeciesEnum.Po);
 		this.setTubbyWeight(1);
-		this.setPoFoodFavorite("Vanilla");
+		this.setPoFoodFavorite(bundle.getString("VANILLA"));
 		this.setHybrid(false);
 		this.setFemale(false);
 		System.out
-				.println("The default values are low, to make an accurate teletubby, use the setters or the other constructors");
+				.println(bundle.getString("DEFAULTSLOW"));
 	}
 
 	/**
@@ -69,11 +71,11 @@ public abstract class Teletubby implements Serializable {
 		this.setTubbyAge(age);
 		this.setTubbySpecies(SpeciesEnum.Po);
 		this.setTubbyWeight(1);
-		this.setPoFoodFavorite("Vanilla");
+		this.setPoFoodFavorite(bundle.getString("VANILLA"));
 		this.setHybrid(false);
 		this.setFemale(false);
 		System.out
-				.println("Might want to consider setting the weight and such");
+				.println(bundle.getString("CONSIDERFIELDS"));
 	}
 
 	/**
@@ -89,11 +91,11 @@ public abstract class Teletubby implements Serializable {
 		this(age);
 		this.setTubbySpecies(species);
 		this.setTubbyWeight(1);
-		this.setPoFoodFavorite("Vanilla");
+		this.setPoFoodFavorite(bundle.getString("VANILLA"));
 		this.setHybrid(false);
 		this.setFemale(false);
 		System.out
-				.println("Might want to consider setting the weight and such");
+				.println(bundle.getString("CONSIDERFIELDS"));
 	}
 
 	/**
@@ -110,10 +112,10 @@ public abstract class Teletubby implements Serializable {
 	public Teletubby(int age, SpeciesEnum species, int weight) {
 		this(age, species);
 		this.setTubbyWeight(weight);
-		this.setPoFoodFavorite("Vanilla");
+		this.setPoFoodFavorite(bundle.getString("VANILLA"));
 		this.setHybrid(false);
 		this.setFemale(false);
-		System.out.println("Consider setting the other fields.");
+		System.out.println(bundle.getString("CONSIDERFIELDS2"));
 	}
 
 	/**
@@ -203,7 +205,7 @@ public abstract class Teletubby implements Serializable {
 		if (tubbyAge != 0) {
 			this.tubbyAge = tubbyAge;
 		} else {
-			System.out.println("Teletubbies cannot be 0 years old, using 1");
+			System.out.println(bundle.getString("INVALIDAGE"));
 			tubbyAge = 1;
 		}
 	}
@@ -252,7 +254,7 @@ public abstract class Teletubby implements Serializable {
 			this.tubbyWeight = tubbyWeight;
 		} else {
 			System.out
-					.println("Teletubbies cannot have 0 weight, setting to 1");
+					.println(bundle.getString("INVALIDWEIGHT"));
 			this.tubbyWeight = 1;
 		}
 	}
@@ -272,8 +274,8 @@ public abstract class Teletubby implements Serializable {
 			this.PoFoodFavorite = poFoodFav;
 		} else {
 			System.out
-					.println("All teletubbies have a favorite po food flavor, Setting to vanilla");
-			this.PoFoodFavorite = "Vanilla";
+					.println(bundle.getString("INVALIDPOFOOD"));
+			this.PoFoodFavorite = bundle.getString("VANILLA");
 		}
 	}
 
@@ -306,9 +308,9 @@ public abstract class Teletubby implements Serializable {
 
 	public String gender() {
 		if (this.isFemale == false) {
-			return "Male";
+			return bundle.getString("MALE");
 		} else {
-			return "Female";
+			return bundle.getString("FEMALE");
 		}
 	}
 
@@ -333,12 +335,12 @@ public abstract class Teletubby implements Serializable {
 	 */
 	public void dig() {
 		throw new TeletubbyException(
-				"Teletubby with digging disabled attempted to dig.");
+				bundle.getString("DIGGINGDISABLED"));
 	}
 
 	public void farm() {
 		throw new TeletubbyException(
-				"Teletubby with farming disabled attempted to farm");
+				bundle.getString("FARMINGDISABLED"));
 	}
 
 	public void farm_pofood() {
@@ -396,9 +398,9 @@ public abstract class Teletubby implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Teletubby{" + "tubbyAge=" + this.tubbyAge + ", tubbySpecies="
-				+ this.tubbySpecies + ", tubbyWeight=" + this.tubbyWeight
-				+ ", PoFoodFavorite=" + this.PoFoodFavorite + ", isHybrid="
-				+ this.isHybrid + ", isFemale=" + this.isFemale + '}';
+		return bundle.getString("TELETUBBY") + bundle.getString("TUBBYAGE") + this.tubbyAge + bundle.getString("TUBBYSPECIES")
+				+ this.tubbySpecies + bundle.getString("TUBBYWEIGHT") + this.tubbyWeight
+				+ bundle.getString("POFOODFAVORITE") + this.PoFoodFavorite + bundle.getString("ISHYBRID")
+				+ this.isHybrid + bundle.getString(" ISFEMALE") + this.isFemale + '}';
 	}
 }

@@ -3,6 +3,8 @@
  */
 package lib.teletubbies;
 
+import java.util.ResourceBundle;
+
 /**
  * @author samis
  * @since 1.1
@@ -14,6 +16,7 @@ public class GenericTeletubby extends Teletubby {
 	 * 
 	 */
 	private static final long serialVersionUID = -2588562901700879606L;
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	/**
 	 * @param age

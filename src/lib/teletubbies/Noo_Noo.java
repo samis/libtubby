@@ -5,12 +5,14 @@
 package lib.teletubbies;
 
 import java.util.Random;
+import java.util.ResourceBundle;
 
 /**
  * 
  * @author samis
  */
 public class Noo_Noo implements Ipet {
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 	private int price;
 	private int niceness;
 	public boolean isNooNoo = true;
@@ -33,7 +35,7 @@ public class Noo_Noo implements Ipet {
 
 	@Override
 	public void sleep() {
-		System.out.println("The Noo Noo is sleeping");
+		System.out.println(bundle.getString("SLEEPSTART"));
 		try {
 			Thread.sleep(10000 * generator.nextInt(10));
 		} catch (InterruptedException ex) {
@@ -42,13 +44,13 @@ public class Noo_Noo implements Ipet {
 
 	@Override
 	public void play(Teletubby t) {
-		System.out.println("The noo noo is playing with the ");
+		System.out.println(bundle.getString("PLAY1"));
 		System.out.print(t.getTubbySpecies());
 	}
 
 	@Override
 	public void play() {
-		System.out.println("The Noo Noo is playing with sometubby.");
+		System.out.println(bundle.getString("PLAY2"));
 	}
 
 	@Override
@@ -56,7 +58,7 @@ public class Noo_Noo implements Ipet {
 		if (niceness != 0) {
 			this.niceness = niceness;
 		} else {
-			System.out.println("Niceness cannot be 0, ignoring");
+			System.out.println(bundle.getString("INVALIDNICENESS"));
 			return;
 		}
 	}
@@ -71,7 +73,7 @@ public class Noo_Noo implements Ipet {
 		if (price != 0) {
 			this.price = price;
 		} else {
-			System.out.println("Price cannot be 0, ignoring");
+			System.out.println(bundle.getString("INVALIDPRICE"));
 			return;
 		}
 	}
@@ -83,7 +85,7 @@ public class Noo_Noo implements Ipet {
 
 	@Override
 	public void hug(Teletubby t) {
-		System.out.print("Noo Noo is hugging the");
-		System.out.print(" " + t.getTubbySpecies());
+		System.out.print(bundle.getString("HUG"));
+		System.out.print(bundle.getString(" ") + t.getTubbySpecies());
 	}
 }

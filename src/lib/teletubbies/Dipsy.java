@@ -5,6 +5,7 @@
 package lib.teletubbies;
 
 import java.util.Random;
+import java.util.ResourceBundle;
 
 /**
  * @since 1.1
@@ -18,6 +19,7 @@ public class Dipsy extends Teletubby {
 	 */
 	private static final long serialVersionUID = 8474449314295089685L;
 	private static transient Random generator = new Random();
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	@Override
 	public String gender() {
@@ -77,14 +79,14 @@ public class Dipsy extends Teletubby {
 	public void dig() {
 		System.out.println("");
 		System.out.print(this.getTubbySpecies());
-		System.out.print(" is digging!");
+		System.out.print(bundle.getString("DIGGINGSTART"));
 		try {
 			Thread.sleep(100000 / (int) this.strength);
 		} catch (InterruptedException ex) {
 		} finally {
 			System.out.println("");
 			System.out.print(this.getTubbySpecies());
-			System.out.print(" has finished digging!");
+			System.out.print(bundle.getString("DIGGINGEND"));
 		}
 	}
 
@@ -120,7 +122,7 @@ public class Dipsy extends Teletubby {
 
 	@Override
 	public String toString() {
-		return "Dipsy{" + "strength=" + this.strength + '}';
+		return bundle.getString("DIPSY") + bundle.getString("STRENGTH") + this.strength + '}';
 	}
 
 }

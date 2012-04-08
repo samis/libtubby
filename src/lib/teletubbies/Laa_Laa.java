@@ -5,6 +5,7 @@
 package lib.teletubbies;
 
 import java.util.Random;
+import java.util.ResourceBundle;
 
 /**
  * Class for Laa Laa's Inherits from Teletubby Laa Laa's have the ability to
@@ -67,6 +68,7 @@ public class Laa_Laa extends Teletubby {
 	private int farming_skill;
 	private boolean farms_pofood;
 	private static transient Random generator = new Random();
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("lib/teletubbies/Bundle");
 
 	public int getFarming_skill() {
 		return this.farming_skill;
@@ -98,22 +100,22 @@ public class Laa_Laa extends Teletubby {
 	}
 
 	public void farm(int time) {
-		System.out.println(" ");
+		System.out.println(bundle.getString(" "));
 		System.out.print(this.getSpecies());
-		System.out.print(" is starting to farm");
-		System.out.println(" ");
+		System.out.print(bundle.getString("FARMSTART"));
+		System.out.println(bundle.getString(" "));
 		try {
 			Thread.sleep(time / (int) this.getStrength());
 		} catch (Exception ex) {
 		}
 		int strengthincrease = generator.nextInt(10);
-		String my = "The Laa Laa's strength has increased by";
+		String my = bundle.getString("STRENGTHINCREASE");
 		System.out.print(my);
-		System.out.print(" " + strengthincrease);
+		System.out.print(bundle.getString(" ") + strengthincrease);
 		this.setStrength(this.strength + strengthincrease);
-		System.out.println(" ");
+		System.out.println(bundle.getString(" "));
 		System.out.print(this.getSpecies());
-		System.out.print(" has finished farming for now.");
+		System.out.print(bundle.getString("FARMINGEND"));
 	}
 
 	@Override
@@ -156,8 +158,8 @@ public class Laa_Laa extends Teletubby {
 
 	@Override
 	public String toString() {
-		String laa_laa_state = "farming skill=" + this.farming_skill + ""
-				+ "farms_pofood=" + this.farms_pofood + "strength="
+		String laa_laa_state = bundle.getString("FARMING SKILL") + this.farming_skill + ""
+				+ bundle.getString("FARMS_POFOOD") + this.farms_pofood + bundle.getString("STRENGTH")
 				+ this.strength;
 		return super.toString() + laa_laa_state;
 	}
