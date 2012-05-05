@@ -4,8 +4,9 @@
  */
 package lib.util;
 
-import lib.teletubbies.*;
-import java.util.*;
+import java.util.ArrayList;
+
+import lib.teletubbies.Teletubby;
 
 public class TeletubbyUtil {
 	/**
@@ -33,16 +34,16 @@ public class TeletubbyUtil {
 	 * @version 1.1
 	 */
 	public ArrayList GetStatus(Teletubby t) {
-		ArrayList mainlist = new ArrayList<ArrayList>();
-		ArrayList numberlist = new ArrayList<Integer>();
-		ArrayList stringlist = new ArrayList<String>();
+		ArrayList<ArrayList> mainlist = new ArrayList<ArrayList>();
+		ArrayList<Integer> numberlist = new ArrayList<Integer>();
+		ArrayList stringlist = new ArrayList();
 
 		mainlist.add(0, numberlist);
 		mainlist.add(1, stringlist);
 
-		stringlist.add(0, t.getClass());
+		stringlist.add(0, t.getClass().toString());
 		stringlist.add(1, t.getPoFoodFavorite());
-		stringlist.add(2, t.getTubbySpecies());
+		stringlist.add(2, t.getSpecies());
 		stringlist.add(3, t.isFemale());
 		stringlist.add(4, t.isHybrid());
 
